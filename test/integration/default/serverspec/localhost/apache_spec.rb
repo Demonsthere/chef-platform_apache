@@ -19,3 +19,8 @@ end
 describe file('/var/www/html/data') do
   it { should be_directory }
 end
+
+describe file('/home/vagrant/.ssh/authorized_keys') do
+  it { should exist }
+  its(:content) { should match /vagrant/ }
+end
