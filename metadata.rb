@@ -7,4 +7,4 @@ long_description 'Installs/Configures chef-platform_apache'
 version '0.1.3'
 
 depends 'apache2'
-depends 'chef-server'
+#depends 'chef-server'

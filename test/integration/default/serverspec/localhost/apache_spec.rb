@@ -22,5 +22,5 @@ end
 
 describe file('/home/vagrant/.ssh/authorized_keys') do
   it { should exist }
-  its(:content) { should match /vagrant/ }
+  its(:content) { should match /jenkins/ }
 end
