@@ -9,7 +9,7 @@ describe package('apache2') do
 end
 
 describe file('/etc/apache2/ports.conf') do
-  it { should contain 'Listen *:80' }
+  it { should contain 'Listen 4280' }
 end
 
 describe service('apache2') do
