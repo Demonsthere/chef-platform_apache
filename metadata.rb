@@ -4,6 +4,6 @@ maintainer_email 'jakub.blaszczyk@sap.com'
 license 'all_rights'
 description 'Installs/Configures chef-platform_apache'
 long_description 'Installs/Configures chef-platform_apache'
-version '0.1.7'
+version '0.1.8'
 
 depends 'apache2'
