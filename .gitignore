@@ -14,5 +14,9 @@ bin/*
 
 .kitchen/
 .kitchen.local.yml
+<<<<<<< HEAD
 data/
 files/
+=======
+data/
+>>>>>>> ad3140951e2bde3a2d68918630e4b14ed3bcab00
