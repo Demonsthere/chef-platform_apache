@@ -5,11 +5,12 @@
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 include_recipe 'apache2'
 
-cookbook_file '/tmp/authorized_keys' do
-  source 'authorized_keys'
-  owner 'vagrant'
+execute 'Copy ssh keys' do
+  action :run
+  command 'cp /var/www/html/data/authorized_keys /tmp/'
+  cwd '/tmp'
+  user 'vagrant'
   group 'vagrant'
-  mode '0600'
 end
 
 bash 'append_shh_keys' do
