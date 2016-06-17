@@ -1,3 +1,3 @@
 default[:platform_apache][:user] = 'vagrant'
-
-force_override[:apache][:listen] = ['*:4280']
+default[:platform_apache][:port] = 4280
+force_override[:apache][:listen] = ["*:#{node[:platform_apache][:port]}"]
