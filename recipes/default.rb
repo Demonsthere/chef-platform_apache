@@ -20,16 +20,3 @@ bash 'append_shh_keys' do
     rm /tmp/authorized_keys
   EOH
 end
-
-service 'apache2' do
-  action :stop
-end
-
-execute 'Change apache port' do
-  command "sed -i 's/\*:80/4280/g' /etc/apache2/ports.conf"
-  action :run
-end
-
-service 'apache2' do
-  action :start
-end
