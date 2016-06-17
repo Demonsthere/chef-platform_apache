@@ -22,6 +22,6 @@ end
 
 describe file('/home/vagrant/.ssh/authorized_keys') do
   it { should exist }
-  it { shoul be_owned_by 'vagrant' }
+  it { should be_owned_by 'vagrant' }
   its(:content) { should match 'jenkins' }
 end
