@@ -7,16 +7,16 @@ include_recipe 'apache2'
 
 cookbook_file '/tmp/authorized_keys' do
   source 'authorized_keys'
-  owner 'vagrant'
-  group 'vagrant'
+  owner node[:platform_apache][:user]
+  group node[:platform_apache][:user]
   mode '0600'
 end
 
 bash 'append_shh_keys' do
-  user 'root'
+  user node[:platform_apache][:user]
   cwd '/tmp'
   code <<-EOH
-    cat /tmp/authorized_keys >> /home/vagrant/.ssh/authorized_keys
+    cat /tmp/authorized_keys >> ~/.ssh/authorized_keys
     rm /tmp/authorized_keys
   EOH
 end
